@@ -1,19 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
-import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, MatSidenavModule, MatToolbarModule, MatNavList } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [MainDashboardComponent],
+  declarations: [ 
+    MatNavList
+  ],
   imports: [
     CommonModule,
+    HttpClientModule,
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    MatSidenavModule,
+    MatToolbarModule,
+  ],
+  exports: [
+    CommonModule,
+    HttpClientModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
   ]
 })
 export class SharedModule { }
